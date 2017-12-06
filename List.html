@@ -1,14 +1,27 @@
+<!--This is the list-view showing all Question / Answer items
+    It uses token-templates, to demonstrate how these work - so the placeholder will be replaced with the values
+    You may wonder where the data comes from - please look at the queries in this example
+-->
+
 <div class="sc-element">
+    <!-- this placeholder will be converted to a floating edit-toolbar, if logged in -->
     [Content:Toolbar]
+    
+    <!-- this placeholder is replaced with a value from the App Resources -->
     <p>[AppResources:ListIntro]</p>
     <ol>
+    <!-- this is a token repeater, so each item will be shown with this -->
     <repeat>
+        <!-- the sc-element class makes this item become independant, so it has an own floating toolbar -->
         <li class="sc-element">
+        [Content:Toolbar]
+        
+        <!-- this generates a link to the details-view, which is on the same page, waiting for "id" in the url --> 
         <a href="?id=[Content:EntityId]" 
     	   onclick="dnnModal.show('?id=[Content:EntityId]&popUp=true', false, 500, 500, false, ''); return false;">
+    		<!-- this just shows the item question -->
     		[Content:Question]
     	</a>
-        [Content:Toolbar]
         </li>
     </repeat>
     </ol>

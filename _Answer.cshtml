@@ -1,15 +1,24 @@
-	<br/>
-	<h1>@Content.Question</h1>
+@* This is the details page
+   It uses razor instead of tokens - just so you see an example how it's done
+   It is shown if "id=..." exists in the url - this is configured in the view-settings
+   The data is retrieved using a query - check that out in the app settings
+*@
 
+<br/>
+@* this will show the question as a title *@
+<h1>@Content.Question</h1>
+
+@* this shows the answer, as HTML (so <br> is really a line break) *@
+<div>
+	@Html.Raw(Content.Answer)
+</div>
+
+@* let's only show the author, if it has an image *@
+@if (!String.IsNullOrEmpty(Content.Image))
+{
 	<div>
-		@Html.Raw(Content.Answer)
+		<br/>
+		<strong>Author</strong><br/>
+		<img src="@Content.Image?w=200&h=200" />
 	</div>
-
-	@if (!String.IsNullOrEmpty(Content.Image))
-	{
-		<div>
-			<br/>
-			<strong>Author</strong><br/>
-			<img src="@Content.Image?w=200&h=200" />
-		</div>
-	}
+}
