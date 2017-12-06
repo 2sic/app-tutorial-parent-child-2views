@@ -1,0 +1,15 @@
+<div class="sc-element">
+    [Content:Toolbar]
+    <p>[AppResources:ListIntro]</p>
+    <ol>
+    <repeat>
+        <li class="sc-element">
+        <a href="[AppSettings:DetailsPage]?id=[Content:EntityId]" 
+    	   onclick="dnnModal.show('[AppSettings:DetailsPage]?id=[Content:EntityId]&popUp=true', false, 500, 500, false, ''); return false;">
+    		[Content:Question]
+    	</a>
+        [Content:Toolbar]
+        </li>
+    </repeat>
+    </ol>
+</div>
