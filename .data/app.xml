@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="09.11.01" ExportDate="2017-12-06T16:01:38.5994438+01:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="09.11.01" ExportDate="2017-12-06T17:25:17.1280166+01:00">
   <Header>
     <App Guid="09624c3c-13b1-4810-ae38-83553a3c3a13" />
     <Language Default="en-US" />
@@ -16,21 +16,7 @@
       </Attributes>
     </AttributeSet>
     <AttributeSet StaticName="App-Settings" Name="App-Settings" Description="Stores settings for an app" Scope="2SexyContent-App" AlwaysShareConfiguration="false">
-      <Attributes>
-        <Attribute StaticName="DetailsPage" Type="Hyperlink" IsTitle="true">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="cec62447-aa67-4636-b0de-22633abcd246" KeyNumber="1891">
-            <Value Key="Name" Value="DetailsPage" Type="String" />
-          </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@Hyperlink" AttributeSetName="@Hyperlink" EntityGUID="82409fc4-c2ef-45ed-908a-82b52cd65b56" KeyNumber="1891">
-            <Value Key="DefaultDialog" Value="PagePicker" Type="String" />
-            <Value Key="FileFilter" Value="" Type="String" />
-            <Value Key="Paths" Value="" Type="String" />
-            <Value Key="ShowFileManager" Value="False" Type="Boolean" />
-            <Value Key="ShowImageManager" Value="False" Type="Boolean" />
-            <Value Key="ShowPagePicker" Value="False" Type="Boolean" />
-          </Entity>
-        </Attribute>
-      </Attributes>
+      <Attributes />
     </AttributeSet>
     <AttributeSet StaticName="e2645a5a-194c-4933-b2a0-b1acd7a60151" Name="QuestionAndAnswer" Description="Q &amp; A" Scope="2SexyContent" AlwaysShareConfiguration="false">
       <Attributes>
@@ -73,7 +59,7 @@
   <Entities>
     <Entity AssignmentObjectType="App" AttributeSetStaticName="2SexyContent-App" AttributeSetName="2SexyContent-App" EntityGUID="14024f0c-f546-40e3-a45d-6e44c54d35ff" KeyNumber="99">
       <Value Key="AllowRazorTemplates" Value="True" Type="Boolean" />
-      <Value Key="AllowTokenTemplates" Value="True" Type="Boolean" />
+      <Value Key="AllowTokenTemplates" Value="False" Type="Boolean" />
       <Value Key="Description" Value="" Type="String" />
       <Value Key="DisplayName" Value="Simple Parent-Child with 2 pages" Type="String" />
       <Value Key="Folder" Value="Simple Parent-Child with 2 pages" Type="String" />
@@ -82,11 +68,9 @@
       <Value Key="RequiredDnnVersion" Value="07.02.00" Type="String" />
       <Value Key="RequiredVersion" Value="08.03.00" Type="String" />
       <Value Key="SupportsAjaxReload" Value="False" Type="Boolean" />
-      <Value Key="Version" Value="02.00.00" Type="String" />
+      <Value Key="Version" Value="02.00.01" Type="String" />
     </Entity>
-    <Entity AssignmentObjectType="App" AttributeSetStaticName="App-Settings" AttributeSetName="App-Settings" EntityGUID="6c1e9324-65b5-48f6-9dbf-fa53f882db13" KeyNumber="99">
-      <Value Key="DetailsPage" Value="Page:612" Type="Hyperlink" />
-    </Entity>
+    <Entity AssignmentObjectType="App" AttributeSetStaticName="App-Settings" AttributeSetName="App-Settings" EntityGUID="6c1e9324-65b5-48f6-9dbf-fa53f882db13" KeyNumber="99" />
     <Entity AssignmentObjectType="App" AttributeSetStaticName="App-Resources" AttributeSetName="App-Resources" EntityGUID="8ccb97e2-8660-4d4a-a49b-791007b69cd7" KeyNumber="99">
       <Value Key="ListIntro" Value="The questions we love!" Type="String" />
     </Entity>
@@ -124,14 +108,14 @@
       <Value Key="ListContentTypeStaticName" Value="" Type="String" />
       <Value Key="ListPresentationTypeStaticName" Value="" Type="String" />
       <Value Key="Location" Value="Portal File System" Type="String" />
-      <Value Key="Name" Value="List" Type="String" />
-      <Value Key="Path" Value="List.html" Type="String" />
+      <Value Key="Name" Value="All" Type="String" />
+      <Value Key="Path" Value="_List.cshtml" Type="String" />
       <Value Key="Pipeline" Value="f6011e01-e6a3-4c28-9950-f74d7e61e67b" Type="Entity" />
       <Value Key="PresentationTypeStaticName" Value="" Type="String" />
       <Value Key="PublishData" Value="False" Type="Boolean" />
       <Value Key="StreamsToPublish" Value="" Type="String" />
-      <Value Key="Type" Value="Token" Type="String" />
-      <Value Key="UseForList" Value="True" Type="Boolean" />
+      <Value Key="Type" Value="C# Razor" Type="String" />
+      <Value Key="UseForList" Value="False" Type="Boolean" />
       <Value Key="ViewNameInUrl" Value="" Type="String" />
     </Entity>
     <Entity AssignmentObjectType="Default" AttributeSetStaticName="DataPipeline" AttributeSetName="DataPipeline" EntityGUID="f6011e01-e6a3-4c28-9950-f74d7e61e67b">
@@ -213,6 +197,22 @@
       <Value Key="Operator" Value="==" Type="String" />
       <Value Key="Take" Value="1" Type="String" />
       <Value Key="Value" Value="[QueryString:ID]" Type="String" />
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-Template" AttributeSetName="2SexyContent-Template" EntityGUID="e49bd423-91c6-4620-8a35-945e7b5a4831">
+      <Value Key="ContentDemoEntity" Value="1a642f0d-9286-4102-a16d-c99b4f6b59e6" Type="Entity" />
+      <Value Key="ContentTypeStaticName" Value="e2645a5a-194c-4933-b2a0-b1acd7a60151" Type="String" />
+      <Value Key="IsHidden" Value="False" Type="Boolean" />
+      <Value Key="ListContentTypeStaticName" Value="" Type="String" />
+      <Value Key="ListPresentationTypeStaticName" Value="" Type="String" />
+      <Value Key="Location" Value="Portal File System" Type="String" />
+      <Value Key="Name" Value="Manual List" Type="String" />
+      <Value Key="Path" Value="_List.cshtml" Type="String" />
+      <Value Key="PresentationTypeStaticName" Value="" Type="String" />
+      <Value Key="PublishData" Value="False" Type="Boolean" />
+      <Value Key="StreamsToPublish" Value="" Type="String" />
+      <Value Key="Type" Value="C# Razor" Type="String" />
+      <Value Key="UseForList" Value="True" Type="Boolean" />
+      <Value Key="ViewNameInUrl" Value="" Type="String" />
     </Entity>
   </Entities>
   <PortalFiles>

@@ -1,0 +1,29 @@
+@* This is a server-side comment - in case you didn't know :)
+
+   This is the list-view showing all Question / Answer items
+   It uses token-templates, to demonstrate how these work - so the placeholder will be replaced with the values
+   You may wonder where the data comes from - please look at the queries in this example
+*@
+<div class="sc-element">
+    @* this will be a floating edit-toolbar, if logged in *@
+    @Edit.Toolbar()
+    
+    @* this adds a value from the App Resources *@
+    <p>@App.Resources.ListIntro</p>
+    <ol>
+    @* this is a repeater, so each item will be shown *@
+    @foreach(var question in AsDynamic(Data["Default"])){
+        @* the sc-element class makes this item become independant, so it has an OWN floating toolbar *@
+        <li class="sc-element">
+            @Edit.Toolbar(question)
+        
+        @* this generates a link to the details-view, which is on the same page, waiting for "id" in the url *@ 
+        <a href="@Link.To(parameters: "id=" + question.EntityId)" 
+    	   onclick="dnnModal.show('@Link.To(parameters: "id=" + question.EntityId)&popUp=true', false, 500, 500, false, ''); return false;">
+    		@* this just shows the item question *@
+    		@question.Question
+    	</a>
+        </li>
+    }
+    </ol>
+</div>
