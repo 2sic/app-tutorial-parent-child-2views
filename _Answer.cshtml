@@ -1,25 +1,15 @@
-@using ToSic.Eav.DataSources
-@{
-	var filterById = CreateSource<EntityIdFilter>();
-	filterById.EntityIds = "[QueryString:ID]";
-	var a = filterById.List.FirstOrDefault();
-}
-@if(a!= null) {
-	var answer = AsDynamic(a);
 	<br/>
-	<h1>@answer.Question</h1>
+	<h1>@Content.Question</h1>
 
 	<div>
-		@Html.Raw(answer.Answer)
+		@Html.Raw(Content.Answer)
 	</div>
 
-	if (!String.IsNullOrEmpty(answer.Image))
+	@if (!String.IsNullOrEmpty(Content.Image))
 	{
 		<div>
 			<br/>
 			<strong>Author</strong><br/>
-			<img src="@answer.Image?w=200&h=200" />
+			<img src="@Content.Image?w=200&h=200" />
 		</div>
 	}
-
-}
