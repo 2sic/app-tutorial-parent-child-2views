@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="09.11.01" ExportDate="2017-12-06T17:25:17.1280166+01:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="09.11.01" ExportDate="2017-12-06T17:42:03.4724092+01:00">
   <Header>
     <App Guid="09624c3c-13b1-4810-ae38-83553a3c3a13" />
     <Language Default="en-US" />
@@ -68,7 +68,7 @@
       <Value Key="RequiredDnnVersion" Value="07.02.00" Type="String" />
       <Value Key="RequiredVersion" Value="08.03.00" Type="String" />
       <Value Key="SupportsAjaxReload" Value="False" Type="Boolean" />
-      <Value Key="Version" Value="02.00.01" Type="String" />
+      <Value Key="Version" Value="02.00.03" Type="String" />
     </Entity>
     <Entity AssignmentObjectType="App" AttributeSetStaticName="App-Settings" AttributeSetName="App-Settings" EntityGUID="6c1e9324-65b5-48f6-9dbf-fa53f882db13" KeyNumber="99" />
     <Entity AssignmentObjectType="App" AttributeSetStaticName="App-Resources" AttributeSetName="App-Resources" EntityGUID="8ccb97e2-8660-4d4a-a49b-791007b69cd7" KeyNumber="99">
@@ -120,37 +120,19 @@
     </Entity>
     <Entity AssignmentObjectType="Default" AttributeSetStaticName="DataPipeline" AttributeSetName="DataPipeline" EntityGUID="f6011e01-e6a3-4c28-9950-f74d7e61e67b">
       <Value Key="AllowEdit" Value="True" Type="Boolean" />
-      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Description" Value="Gets all questions for the list-all view" Type="String" />
       <Value Key="Name" Value="AllQuestions" Type="String" />
       <Value Key="StreamsOut" Value="ListContent,Default" Type="String" />
-      <Value Key="StreamWiring" Value="45be47b5-22e2-4954-952c-4cbbbf0d2903:Default&gt;f7979469-6eea-466d-94ed-83dd6aab0e02:Default&#xD;&#xA;45be47b5-22e2-4954-952c-4cbbbf0d2903:Drafts&gt;f7979469-6eea-466d-94ed-83dd6aab0e02:Drafts&#xD;&#xA;45be47b5-22e2-4954-952c-4cbbbf0d2903:Published&gt;f7979469-6eea-466d-94ed-83dd6aab0e02:Published&#xD;&#xA;f7979469-6eea-466d-94ed-83dd6aab0e02:Default&gt;d1b20ad2-4087-4804-955f-41ac50891066:Default&#xD;&#xA;d1b20ad2-4087-4804-955f-41ac50891066:Default&gt;4de98ec9-59b5-4155-b549-6a5d475917bc:Default&#xD;&#xA;4de98ec9-59b5-4155-b549-6a5d475917bc:Default&gt;Out:Default" Type="String" />
+      <Value Key="StreamWiring" Value="4de98ec9-59b5-4155-b549-6a5d475917bc:Default&gt;Out:Default&#xD;&#xA;04562b6e-a08d-403b-b030-c19a1c329fac:QuestionAndAnswer&gt;4de98ec9-59b5-4155-b549-6a5d475917bc:Default" Type="String" />
       <Value Key="TestParameters" Value="[Module:ModuleID]=2995" Type="String" />
     </Entity>
     <Entity AssignmentObjectType="Default" AttributeSetStaticName="DataPipeline" AttributeSetName="DataPipeline" EntityGUID="5b3f0a93-eb0c-4610-b5b4-5c97cfda88b9">
       <Value Key="AllowEdit" Value="True" Type="Boolean" />
-      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Description" Value="Gets one item based on the id in the url" Type="String" />
       <Value Key="Name" Value="QuestionOfId" Type="String" />
       <Value Key="StreamsOut" Value="ListContent,Default" Type="String" />
-      <Value Key="StreamWiring" Value="d81870fa-183c-4082-b302-af01e63cd81c:Default&gt;9e5df132-cd0f-43b2-a12f-78d607b71ed9:Default&#xD;&#xA;d81870fa-183c-4082-b302-af01e63cd81c:Drafts&gt;9e5df132-cd0f-43b2-a12f-78d607b71ed9:Drafts&#xD;&#xA;d81870fa-183c-4082-b302-af01e63cd81c:Published&gt;9e5df132-cd0f-43b2-a12f-78d607b71ed9:Published&#xD;&#xA;9e5df132-cd0f-43b2-a12f-78d607b71ed9:Default&gt;b4870844-ed32-4244-9837-114ef09e05bd:Default&#xD;&#xA;b4870844-ed32-4244-9837-114ef09e05bd:Default&gt;bce7b108-80ad-45cb-9d22-ada51fa8bf99:Default&#xD;&#xA;bce7b108-80ad-45cb-9d22-ada51fa8bf99:Default&gt;Out:Default" Type="String" />
+      <Value Key="StreamWiring" Value="bce7b108-80ad-45cb-9d22-ada51fa8bf99:Default&gt;Out:Default&#xD;&#xA;3f4aefc3-23b0-4096-b05e-123b7602d192:QuestionAndAnswer&gt;bce7b108-80ad-45cb-9d22-ada51fa8bf99:Default" Type="String" />
       <Value Key="TestParameters" Value="[Module:ModuleID]=2995&#xA;[QueryString:Id]=6580" Type="String" />
-    </Entity>
-    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="45be47b5-22e2-4954-952c-4cbbbf0d2903" KeyGuid="f6011e01-e6a3-4c28-9950-f74d7e61e67b">
-      <Value Key="Description" Value="" Type="String" />
-      <Value Key="Name" Value="ICache" Type="String" />
-      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.Caches.ICache, ToSic.Eav.DataSources" Type="String" />
-      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 526,&#xD;&#xA;  &quot;Left&quot;: 440&#xD;&#xA;}" Type="String" />
-    </Entity>
-    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="f7979469-6eea-466d-94ed-83dd6aab0e02" KeyGuid="f6011e01-e6a3-4c28-9950-f74d7e61e67b">
-      <Value Key="Description" Value="" Type="String" />
-      <Value Key="Name" Value="PublishingFilter" Type="String" />
-      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.PublishingFilter, ToSic.Eav.DataSources" Type="String" />
-      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 372,&#xD;&#xA;  &quot;Left&quot;: 440&#xD;&#xA;}" Type="String" />
-    </Entity>
-    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="d1b20ad2-4087-4804-955f-41ac50891066" KeyGuid="f6011e01-e6a3-4c28-9950-f74d7e61e67b">
-      <Value Key="Description" Value="" Type="String" />
-      <Value Key="Name" Value="Type: QuestionAndAnswer" Type="String" />
-      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.EntityTypeFilter, ToSic.Eav.DataSources" Type="String" />
-      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 260,&#xD;&#xA;  &quot;Left&quot;: 440&#xD;&#xA;}" Type="String" />
     </Entity>
     <Entity AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.EntityTypeFilter" AttributeSetName="|Config ToSic.Eav.DataSources.EntityTypeFilter" EntityGUID="4bbe4d61-b5a1-441f-9083-75b920d444a2" KeyGuid="d1b20ad2-4087-4804-955f-41ac50891066">
       <Value Key="TypeName" Value="QuestionAndAnswer" Type="String" />
@@ -159,35 +141,17 @@
       <Value Key="Description" Value="" Type="String" />
       <Value Key="Name" Value="ValueSort" Type="String" />
       <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.ValueSort, ToSic.Eav.DataSources" Type="String" />
-      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 130,&#xD;&#xA;  &quot;Left&quot;: 440&#xD;&#xA;}" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 200,&#xD;&#xA;  &quot;Left&quot;: 414&#xD;&#xA;}" Type="String" />
     </Entity>
     <Entity AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.ValueSort" AttributeSetName="|Config ToSic.Eav.DataSources.ValueSort" EntityGUID="9424699f-faee-4987-95b0-7863e08d195c" KeyGuid="4de98ec9-59b5-4155-b549-6a5d475917bc">
       <Value Key="Attributes" Value="Question" Type="String" />
       <Value Key="Directions" Value="" Type="String" />
     </Entity>
-    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="d81870fa-183c-4082-b302-af01e63cd81c" KeyGuid="5b3f0a93-eb0c-4610-b5b4-5c97cfda88b9">
-      <Value Key="Description" Value="" Type="String" />
-      <Value Key="Name" Value="ICache" Type="String" />
-      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.Caches.ICache, ToSic.Eav.DataSources" Type="String" />
-      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 440,&#xD;&#xA;  &quot;Left&quot;: 440&#xD;&#xA;}" Type="String" />
-    </Entity>
-    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="9e5df132-cd0f-43b2-a12f-78d607b71ed9" KeyGuid="5b3f0a93-eb0c-4610-b5b4-5c97cfda88b9">
-      <Value Key="Description" Value="" Type="String" />
-      <Value Key="Name" Value="PublishingFilter" Type="String" />
-      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.PublishingFilter, ToSic.Eav.DataSources" Type="String" />
-      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 300,&#xD;&#xA;  &quot;Left&quot;: 440&#xD;&#xA;}" Type="String" />
-    </Entity>
     <Entity AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="bce7b108-80ad-45cb-9d22-ada51fa8bf99" KeyGuid="5b3f0a93-eb0c-4610-b5b4-5c97cfda88b9">
       <Value Key="Description" Value="" Type="String" />
       <Value Key="Name" Value="ValueFilter" Type="String" />
       <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.ValueFilter, ToSic.Eav.DataSources" Type="String" />
-      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 109,&#xD;&#xA;  &quot;Left&quot;: 440&#xD;&#xA;}" Type="String" />
-    </Entity>
-    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="b4870844-ed32-4244-9837-114ef09e05bd" KeyGuid="5b3f0a93-eb0c-4610-b5b4-5c97cfda88b9">
-      <Value Key="Description" Value="" Type="String" />
-      <Value Key="Name" Value="ContentTypeFilter" Type="String" />
-      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.EntityTypeFilter, ToSic.Eav.DataSources" Type="String" />
-      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 200,&#xD;&#xA;  &quot;Left&quot;: 447&#xD;&#xA;}" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 131,&#xD;&#xA;  &quot;Left&quot;: 428&#xD;&#xA;}" Type="String" />
     </Entity>
     <Entity AssignmentObjectType="Entity" AttributeSetStaticName="|Config ToSic.Eav.DataSources.EntityTypeFilter" AttributeSetName="|Config ToSic.Eav.DataSources.EntityTypeFilter" EntityGUID="718284f8-6e4c-4946-9a05-1c668e487f2a" KeyGuid="b4870844-ed32-4244-9837-114ef09e05bd">
       <Value Key="TypeName" Value="QuestionAndAnswer" Type="String" />
@@ -213,6 +177,23 @@
       <Value Key="Type" Value="C# Razor" Type="String" />
       <Value Key="UseForList" Value="True" Type="Boolean" />
       <Value Key="ViewNameInUrl" Value="" Type="String" />
+    </Entity>
+    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="3f4aefc3-23b0-4096-b05e-123b7602d192" KeyGuid="5b3f0a93-eb0c-4610-b5b4-5c97cfda88b9">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="App" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.App, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 360,&#xD;&#xA;  &quot;Left&quot;: 380&#xD;&#xA;}" Type="String" />
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="e2645a5a-194c-4933-b2a0-b1acd7a60151" AttributeSetName="QuestionAndAnswer" EntityGUID="261da164-acc0-4763-b235-07762d38c989">
+      <Value Key="Answer" Value="&lt;p&gt;This has an answer, but no author-image.&amp;nbsp;&lt;/p&gt;" Type="String" />
+      <Value Key="Image" Value="" Type="Hyperlink" />
+      <Value Key="Question" Value="Just another question" Type="String" />
+    </Entity>
+    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="DataPipelinePart" AttributeSetName="DataPipelinePart" EntityGUID="04562b6e-a08d-403b-b030-c19a1c329fac" KeyGuid="f6011e01-e6a3-4c28-9950-f74d7e61e67b">
+      <Value Key="Description" Value="" Type="String" />
+      <Value Key="Name" Value="App" Type="String" />
+      <Value Key="PartAssemblyAndType" Value="ToSic.Eav.DataSources.App, ToSic.Eav.DataSources" Type="String" />
+      <Value Key="VisualDesignerData" Value="{&#xD;&#xA;  &quot;Top&quot;: 370,&#xD;&#xA;  &quot;Left&quot;: 420&#xD;&#xA;}" Type="String" />
     </Entity>
   </Entities>
   <PortalFiles>
